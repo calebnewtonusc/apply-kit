@@ -1,6 +1,6 @@
-# [Club Name] draft
+# [Org Name] draft
 
-**Drafted [date].** Source: `applications/[Club Name].md`. AI policy: [policy].
+**Drafted [date].** Source: `applications/[Org Name].md`. AI policy: [policy].
 
 ## Q1. [prompt verbatim] ([limit])
 

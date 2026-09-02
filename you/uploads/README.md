@@ -28,7 +28,7 @@ valuable material in this repo.
 **Screenshots or PDFs of the application forms** you are applying to. This is how the
 agent gets the real prompts instead of guessing at them.
 
-**A transcript**, if any club asks for GPA or coursework.
+**A transcript**, if any org asks for GPA or coursework.
 
 ## Note
 

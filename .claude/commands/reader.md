@@ -3,7 +3,7 @@ description: Read the whole packet as the human who actually receives it
 ---
 
 Load `reader-pov` and follow it. Run on the **whole packet at once**, every file in
-`drafts/`, not one club at a time. Most of what this catches only exists across
+`drafts/`, not one org at a time. Most of what this catches only exists across
 answers.
 
 Write `review/READER.md`.

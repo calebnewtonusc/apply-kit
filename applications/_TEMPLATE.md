@@ -1,9 +1,10 @@
-# [Club Name]
+# [Org Name]
 
 **Verified [date] against [source URL].** Anything not verified is marked below.
 
 |                |                                                 |
 | -------------- | ----------------------------------------------- |
+| **Type**       | `student-org` / `job` / `fellowship` / `grad-school` / `grant` / `accelerator` |
 | What they do   | One sentence, from their own material           |
 | Deadline       | Date and time, or NOT PUBLISHED                 |
 | Meeting        | Day, time, and whether mandatory                |
@@ -14,7 +15,7 @@
 
 ## Format requirements
 
-Copied exactly from the form. These differ per club and cost people applications.
+Copied exactly from the form. These differ per org and cost people applications.
 
 - File type:
 - Exact filename required:
@@ -22,10 +23,22 @@ Copied exactly from the form. These differ per club and cost people applications
 - Link permissions:
 - Video length:
 
+## Specifics
+
+Facts about them that make a "why us" answer unfakeable. `/whyus` fills this in. Every
+line carries a source and the date it was checked.
+
+- ( fact ) Source: ( url ), checked ( date )
+
+### Unverified, do not use
+
+Anything that could not be sourced, with what to check. Never promote a line out of
+here because it is probably true.
+
 ## The angle
 
-Two or three sentences. What this club is actually selecting for, and which part of
-your material fits it. Which club in this cluster to write first, if this one adapts
+Two or three sentences. What this org is actually selecting for, and which part of
+your material fits it. Which org in this cluster to write first, if this one adapts
 from another.
 
 ## Questions
@@ -35,7 +48,7 @@ Prompts verbatim. Never paraphrase. If you do not have the real text yet, write
 
 ### Q1. [prompt verbatim] ([limit], required/optional)
 
-> **Unasked:** What the club is actually deciding with this answer. Two to four
+> **Unasked:** What the org is actually deciding with this answer. Two to four
 > sentences. Name the decision, not the theme.
 
 **Pull from:** which story in `you/STORY-BANK.md`, and why.
@@ -46,7 +59,7 @@ Prompts verbatim. Never paraphrase. If you do not have the real text yet, write
 
 **Pull from:**
 
-## Dead lines for this club
+## Dead lines for this org
 
 Grep list. Phrases that must not appear in this application, checked before submitting.
 

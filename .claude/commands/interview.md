@@ -1,13 +1,16 @@
 ---
 description: Run mock interviews with real follow-ups
-argument-hint: [optional: club name]
+argument-hint: [optional: org name]
 ---
 
-Load `mock-interview` and follow it.
+Load `mock-interview` and `application-types`, then read this org's file in
+`reference/`. The rounds, the format, and what gets scored are different for a case
+interview, a technical screen, a fellowship panel, and a faculty conversation about
+your research. Prepping the wrong shape wastes the week.
 
 ## First, once
 
-If they have interviewed with any of these clubs before and not gotten in, ask what
+If they have interviewed with any of these orgs before and not gotten in, ask what
 actually happened in the room: ran long, froze, got a case they had not seen, talked
 past the question, could not recall a number. Each has a different drill, and prepping
 against a guess wastes their week.
@@ -39,9 +42,9 @@ page. This is the highest-value part of interview prep and almost nobody does it
   expect
 - Anything sensitive in their history, rehearsed to two flat sentences and a return to
   the present, respecting `you/DISCLOSURE.md`
-- "If all of these clubs said yes, which would you pick?" They will be asked, and if
+- "If all of these orgs said yes, which would you pick?" They will be asked, and if
   several have conflicting mandatory meetings they will definitely be asked
-- The club's published rubric, if it has one, mapped to one story each
+- The org's published rubric, if it has one, mapped to one story each
 
 ## End with
 

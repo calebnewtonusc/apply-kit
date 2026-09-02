@@ -40,7 +40,7 @@ With a real cost. Not a win in disguise.
 ## Threads
 
 Recurring subjects that can angle toward almost any prompt. For each, one line on what
-it is and which kind of club it fits.
+it is and which kind of org it fits.
 
 ## What you believe that people around you do not
 

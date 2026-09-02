@@ -21,7 +21,7 @@ one value goes in a table:
 
 | Claim           | Profile | Resume | Drafts       |
 | --------------- | ------- | ------ | ------------ |
-| Club membership | 70+     | 90+    | 80+ (BTG Q1) |
+| Org membership | 70+     | 90+    | 80+ (BTG Q1) |
 
 Then ask which is defensible and what exactly it counts. Two different countings of
 the same thing can both be true and are not the same claim. Once they choose, write it
@@ -43,7 +43,7 @@ claim is accurate, it is accurate: update `you/PROFILE.md` to match and drop it.
 ## 4. Dead lines
 
 Grep every draft for the phrases listed as dead in `you/STORY-BANK.md` and in each
-club file. Report hits with file and line.
+org file. Report hits with file and line.
 
 ## 5. Disclosure check
 

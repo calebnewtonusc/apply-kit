@@ -13,28 +13,37 @@ catches only exists across answers.
 
 ## The three people
 
-Read the packet three times, once as each.
+Read the packet three times, once as each. **Who these three are depends on the type**,
+so load `application-types` and read the matching `reference/` file first. The roles
+below hold across types even though the people change.
 
-**The first-round screener.** A sophomore, 11pm, 200 left in the pile, scoring on a
-form with four boxes. Sixty seconds. They are looking for a reason to stop reading.
+**The filter.** Whoever decides you are worth more than a minute. A sophomore officer at
+11pm with 200 left. A recruiter scanning against a requisition. A program officer
+checking eligibility before anything else.
 
 Report: which answer would make them stop, where their attention drops, whether the
-first sentence of each answer earned the second, and whether anything made them
-uneasy in a way they could not articulate.
+first sentence of each answer earned the second, and whether anything made them uneasy
+in a way they could not articulate.
 
-**The specialist doing diligence.** The club officer who actually knows the domain and
-will interview you if you pass. They read for whether the claims hold.
+**The specialist doing diligence.** The person who actually knows the domain and will
+interview you if you pass. The officer who ran the project you mentioned. The hiring
+manager. The faculty member whose lab you named. They read for whether the claims hold.
 
 Report: every number they would ask "how did you get that," every claim that reads
 bigger than it probably is, every place where the same fact appears differently in two
 answers or between an answer and the resume.
 
-**The future teammate.** Someone deciding whether they want to be assigned to a
-project with you for fifteen weeks.
+**The person who has to live with the decision.** Deciding whether they want to be
+assigned to a project with you for fifteen weeks, manage you for two years, advise you
+for five, or defend the grant when it is audited.
 
-Report: do you sound like a person or a candidate, is there one moment of actual
-warmth or humor, does anything read as someone who cannot be told they are wrong, and
-would they be glad or tired to see your name on their team.
+Report: do you sound like a person or a candidate, is there one moment of actual warmth
+or humor, does anything read as someone who cannot be told they are wrong, and would
+they be glad or tired to see your name.
+
+That third reader is weighted differently by type. For `student-org` and `grad-school`
+it is close to decisive, because the reader is choosing a person they will actually work
+beside. For `grant` it is the weakest of the three, because they are funding a plan.
 
 ## What to look for that a rules check misses
 
@@ -57,7 +66,7 @@ Notice where the room changes.
 
 **Density of one theme.** If one subject appears in five of ten answers, that is a
 texture observation, not automatically a problem. Reusing your strongest material
-across different clubs is what every applicant does and what clubs expect. Say what
+across different orgs is what every applicant does and what orgs expect. Say what
 you noticed, give a read, and let the applicant decide. Do not argue that a reader
 going through 200 applications is cross-referencing one person, because they are not.
 

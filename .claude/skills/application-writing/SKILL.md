@@ -1,25 +1,36 @@
 ---
 name: application-writing
-description: How to write club application answers that survive a real reader. Use whenever drafting, revising, or evaluating an answer for a club, fellowship, program, or organization application.
+description: How to write application answers that survive a real reader, for any kind of application. Use whenever drafting, revising, or evaluating an answer for a club, job, fellowship, graduate program, grant, or accelerator.
 ---
 
-# Writing club applications
+# Writing applications
 
 ## Who reads this
 
-One person, on a couch, at 11pm, with somewhere between 80 and 400 applications
-left. They are scoring against a rubric that lives mostly in their head. They spend
-60 to 90 seconds on yours unless something makes them slow down.
+Load `application-types` first and read the file in `reference/` for this application's
+type. Who the reader is changes what the answer has to do, and it is the one thing
+about application writing that is not universal.
 
-They are not looking for the best applicant. They are looking for a reason to move
-you to the yes pile so they can stop thinking about you. Give them one in the first
-sentence.
+The short version of each:
 
-By the time they reach you they have read the same essay forty times: passionate
+| Type | The reader | How long they spend |
+| ---- | ---------- | ------------------- |
+| `student-org` | A peer who will be your teammate | 60 to 90 seconds |
+| `job` | A filter, then a hiring manager | Under a minute, then longer |
+| `fellowship` | A committee scoring published criteria | Long, several readers |
+| `grad-school` | Faculty reading for fit with a lab | Long |
+| `grant` | A program officer with a checklist | Long, structured |
+| `accelerator` | A partner looking for a reason to take a call | Fast |
+
+What holds across all six: **they are not looking for the best applicant.** They are
+looking for a reason to move you forward so they can stop deciding about you. Give them
+one early.
+
+And by the time they reach you they have read the same answer many times: passionate
 about the intersection of business and technology, drawn to your commitment to
 excellence, eager to learn from a community of driven individuals. Every one of those
-essays was written by a real person with a real life. The essays just did not contain
-any of it.
+was written by a real person with a real life. The writing just did not contain any of
+it.
 
 ## Openings
 
@@ -48,7 +59,7 @@ details.
 
 | Generic                    | Specific                                                                        |
 | -------------------------- | ------------------------------------------------------------------------------- |
-| I led a large organization | I ran a 90-person club and a coalition of 20 others                             |
+| I led a large organization | I ran a 90-person org and a coalition of 20 others                             |
 | We improved the process    | Cut check-in from 25 minutes to 6 by pre-printing badges                        |
 | Interested in consulting   | I want to know why the nonprofit I worked at ran three overlapping intake forms |
 | Passionate about design    | I redrew our flyer six times because nobody could find the date                 |
@@ -66,7 +77,7 @@ question.
 - "A time you failed" is not "a time I struggled and then triumphed." Give a real
   failure with a real cost you did not fully recover. That is the test: can you look
   at yourself honestly.
-- "Why this club" is not "why this field." If the answer works for three clubs, it is
+- "Why this org" is not "why this field." If the answer works for three orgs, it is
   not an answer to this one.
 - "A time you disagreed with a teammate" is not "a time I was right." Resolution
   matters more than vindication.
@@ -78,16 +89,16 @@ question.
 Applications ask ten things and score two. See the `unasked-questions` skill for the
 full method, but these two run under nearly every prompt:
 
-**Why us and not the six others like you?** If you are applying to several clubs in
+**Why us and not the six others like you?** If you are applying to several orgs in
 one lane, every one of them knows it. Any sentence in a "why us" answer that would
-work for a different club is a wasted sentence. Name one specific thing: a project
+work for a different org is a wasted sentence. Name one specific thing: a project
 they ran, an alum outcome, a workshop you attended, a person you talked to. Never
 their website adjectives back at them.
 
 **Are you here to learn or to be impressive?** This one cuts hardest against strong
 applicants. People who have actually shipped things fail it constantly by arriving as
 someone who already knows. Naming your gap honestly is the move that works: "the work
-felt like consulting, but I was doing it on intuition." That gives the club a job.
+felt like consulting, but I was doing it on intuition." That gives the org a job.
 
 ## The "why us" trap
 
@@ -113,30 +124,46 @@ to someone who used all 250.
 
 ## The fun questions are real questions
 
-Favorite snack. A song that describes your life. Your life as a TV show. These are not
-filler. This is the club deciding whether they want to sit next to you on Tuesday
-nights for a semester.
+Mostly a `student-org` thing, and occasionally `accelerator`. Favorite snack. A song
+that describes your life. Your life as a TV show. These are not filler. This is the org
+deciding whether they want to sit next to you on Tuesday nights for a semester.
 
 Answer with an actual specific thing you actually like. Strategic answers are visible
-from space and read as someone who cannot relax. Specific and slightly odd beats
-clever every time.
+from space and read as someone who cannot relax. Specific and slightly odd beats clever
+every time.
 
-One caution: an answer that depends on something painful the reader does not know
-about you will land differently than you expect. If it needs backstory they do not
-have, pick a different answer.
+One caution: an answer that depends on something painful the reader does not know about
+you will land differently than you expect. If it needs backstory they do not have, pick
+a different answer.
+
+The other types have their own version of a question that looks soft and is not:
+
+- `job`: "do you have any questions for us." Scored more than applicants think, and the
+  failure mode is asking something the careers page answers.
+- `fellowship` and `grad-school`: the optional statement or the "anything else we should
+  know" box. Taking it is the answer.
+- `grant`: sustainability. It sounds like boilerplate and it is the question the
+  committee actually argues about.
+- `accelerator`: "what is your biggest risk." Naming a real one plainly reads as
+  maturity. Saying execution reads as someone who has not thought about it.
 
 ## Repetition
 
 **Within one application:** never tell the same story twice. The reader sees the whole
 form and it makes you look like you have one experience.
 
-**Across different clubs:** reuse your strongest material freely. A reader going
+**Across different orgs:** reuse your strongest material freely. A reader going
 through 200 applications is not cross-referencing one applicant, and every applicant
-reuses. Just re-angle it toward what each club actually asked.
+reuses. Just re-angle it toward what each org actually asked.
 
 ## Structure inside an answer
 
-For anything over 100 words:
+If the form mandates headings, use theirs, in their order. This is the norm for `grant`
+and common for `fellowship`, and a reviewer hunting for your evaluation plan should not
+have to find it. `grad-school` statements have their own expected shape, in
+`reference/grad-school.md`, and it is not this one.
+
+Otherwise, for anything over 100 words:
 
 1. Concrete opening, no setup
 2. What you did, in mechanisms

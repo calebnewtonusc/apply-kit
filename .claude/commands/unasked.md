@@ -1,13 +1,13 @@
 ---
 description: Write the real question under every prompt, or audit a draft against them
-argument-hint: [optional: club name]
+argument-hint: [optional: org name]
 ---
 
 Load the `unasked-questions` skill and follow it.
 
 **If the application files do not have unasked blocks yet:** write one under every
-prompt in $1, or in every file in `applications/` if no club is given. Two to four
-sentences, quoted block, naming the decision the club is making with that answer. Do
+prompt in $1, or in every file in `applications/` if no org is given. Two to four
+sentences, quoted block, naming the decision the org is making with that answer. Do
 every prompt, including the fun ones.
 
 **If they already exist:** run the audit instead. For each answer in `drafts/`, hand
@@ -23,7 +23,7 @@ than a rewrite of sentences.
 
 ## Roll up the repeats
 
-When the same unasked question appears under prompts at four or more clubs, promote it
+When the same unasked question appears under prompts at four or more orgs, promote it
 to the top of `applications/INDEX.md` and stop repeating the analysis in each file.
 
 Those repeated ones are the real shape of the cycle. Say them out loud to the

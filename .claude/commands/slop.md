@@ -1,6 +1,6 @@
 ---
 description: Find the sentences that read as AI-written or as generic filler
-argument-hint: [optional: club name, or blank for all drafts]
+argument-hint: [optional: org name, or blank for all drafts]
 ---
 
 Load `no-slop-writing`. Run in **detect mode** by default. Do not rewrite unless they
@@ -12,7 +12,7 @@ Scan $1 if given, otherwise every file in `drafts/`. Write `review/SLOP.md`.
 ## Report, in this order
 
 **1. Portability failures.** The most important section. Every sentence that could
-appear in another applicant's essay to another club unchanged, quoted, with the file
+appear in another applicant's essay to another org unchanged, quoted, with the file
 and question. For each, one line on what would make it theirs: a name, a number, a
 mechanism, an opinion someone could disagree with.
 

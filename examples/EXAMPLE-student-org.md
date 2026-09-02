@@ -1,7 +1,9 @@
 # EXAMPLE: Campus Consulting Group
 
-**This is a filled-in example so you can see what a real file looks like. The club is
-made up. Your files go in `applications/`, not here.**
+**A filled-in example of a `student-org` file, so you can see what a real one looks
+like. The org is made up. Your files go in `applications/`, not here. Compare it with
+[EXAMPLE-job.md](EXAMPLE-job.md), which is the same repo pointed at a very different
+reader.**
 
 The part worth studying is the unasked block under each question. That is where the
 work happens.
@@ -12,6 +14,7 @@ work happens.
 
 |                |                                                                    |
 | -------------- | ------------------------------------------------------------------ |
+| **Type**       | `student-org`                                                      |
 | What they do   | Pro-bono strategy projects for local nonprofits, four per semester |
 | Deadline       | Sept 5, 11:59pm                                                    |
 | Meeting        | Tuesdays 8 to 9:30pm, mandatory                                    |
@@ -35,16 +38,16 @@ not for people who are impressive. Applicant has real shipped work, which is the
 liability here: it makes it easy to arrive as someone who already knows. The move that
 passed their written round last time was naming the gap honestly. Do that again.
 
-Write this one first. Q1 becomes the core that three other clubs adapt from.
+Write this one first. Q1 becomes the core that three other orgs adapt from.
 
 ## Questions
 
 ### Q1. Why do you want to join Campus Consulting Group? (250 words, required)
 
-> **Unasked:** Why us and not the five other consulting clubs you are obviously also
+> **Unasked:** Why us and not the five other consulting orgs you are obviously also
 > applying to. And, since you applied last year and we said no, what is actually
 > different now. Nobody will ask that second one out loud and everyone reading will be
-> thinking it. An answer that could be pasted into another club's form answers neither.
+> thinking it. An answer that could be pasted into another org's form answers neither.
 
 **Pull from:** the handoff story, plus one specific thing from the info session.
 Name a real project of theirs, not their website adjectives.
@@ -78,7 +81,7 @@ change as you engaged with it? (200 words)
 
 **Pull from:** whatever is actually true.
 
-## Dead lines for this club
+## Dead lines for this org
 
 - "I left my old major for deeper technical foundations"
 - "passionate about the intersection of business and technology"
@@ -87,5 +90,5 @@ change as you engaged with it? (200 words)
 ## Open items
 
 - Resume is still a `.md` file. Needs PDF export, one page, with the comma filename.
-- Tuesday 8pm conflicts with two other clubs on the list. Decide the ranking before
+- Tuesday 8pm conflicts with two other orgs on the list. Decide the ranking before
   interviews.

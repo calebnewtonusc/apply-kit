@@ -1,6 +1,6 @@
 ---
 name: mock-interview
-description: Run realistic club interviews with real follow-ups, and prepare stories that flex onto any question. Use for /interview and whenever written rounds are passing but interviews are not.
+description: Run realistic org interviews with real follow-ups, and prepare stories that flex onto any question. Use for /interview and whenever written rounds are passing but interviews are not.
 ---
 
 # The interview round
@@ -10,7 +10,7 @@ pattern, the written material is not the problem and more drafting will not fix 
 
 ## The frame that matters
 
-**The application is the interview's question bank.** Consulting and startup clubs
+**The application is the interview's question bank.** Consulting and startup orgs
 interview off the page in front of them, line by line, and the follow-up is always
 "walk me through that."
 
@@ -34,8 +34,29 @@ Almost any behavioral question maps onto one of these. Write them in
 `you/STORY-BANK.md` with the specifics: names, numbers, what happened at the worst
 moment, what happened after.
 
-Then map them to the club's published rubric if one exists. Many service orgs publish
+Then map them to the org's published rubric if one exists. Many service orgs publish
 exactly what they score.
+
+## The interview is a different animal per type
+
+Load `application-types` and read the matching `reference/` file. The prep is not the
+same.
+
+- `student-org`: off the page, line by line, plus a case at consulting and venture
+  groups. Expect "which would you pick if they all said yes."
+- `job`: several rounds with different jobs. Recruiter screen for logistics, technical
+  screen or take-home for capability, behavioral loop for judgment, final for fit.
+  Behavioral answers want the situation short, your own actions long.
+- `fellowship`: a panel, often including people outside the field. Explaining your work
+  to a non-specialist is the scored test, not a courtesy. They press on the plan.
+- `grad-school`: a conversation about your research. The failure is being unable to go
+  one level deeper on your own project. Expect "what did you actually do versus your
+  advisor."
+- `grant`: often no interview, sometimes a site visit or a call about the budget and the
+  timeline rather than about you.
+- `accelerator`: fast, interruptive, comfortable being adversarial. They push on the
+  weakest thing you wrote. Practice being interrupted, because a rehearsed pitch
+  delivered over an interruption is how this round usually goes badly.
 
 ## Structure that buys thinking time
 
@@ -71,9 +92,9 @@ Honor it without relitigating.
 
 ## The question everyone gets and nobody prepares
 
-"You are applying to several clubs. If they all said yes, which would you pick?"
+"You are applying to several orgs. If they all said yes, which would you pick?"
 
-If they have applied to multiple clubs in one lane, especially ones with conflicting
+If they have applied to multiple orgs in one lane, especially ones with conflicting
 mandatory meetings, they will be asked. Have the answer ready and have it be honest.
 
 ## Diagnosing a past failure

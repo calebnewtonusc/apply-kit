@@ -1,9 +1,10 @@
 ---
 description: Get an answer under its word limit without gutting it
-argument-hint: [club name and question number]
+argument-hint: [org name and question number]
 ---
 
-Cut $1 to its limit. Report the exact count before and after.
+Cut $1 to its limit. Run `tools/count.sh` for the count before and after and report
+what it says. Do not estimate a word count.
 
 ## Order of cuts
 

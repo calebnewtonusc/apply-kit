@@ -1,6 +1,6 @@
 ---
 name: honesty-guard
-description: Never fabricate a fact about the applicant, keep numbers consistent across every document, and respect club AI bans. Use during drafting, /truth, and before any submission.
+description: Never fabricate a fact about the applicant, keep numbers consistent across every document, and respect org AI bans. Use during drafting, /truth, and before any submission.
 ---
 
 # Honesty guard
@@ -17,7 +17,7 @@ When a draft needs a detail you do not have:
 
 ```
 I ran the event for [NEED: how many attendees] students across
-[NEED: how many schools, and are you counting schools or clubs?] campuses.
+[NEED: how many schools, and are you counting schools or orgs?] campuses.
 ```
 
 Then list every `[NEED:]` at the bottom of the draft file. A draft with six markers is
@@ -40,12 +40,12 @@ Run this check as part of `/truth`:
 2. Group by claim.
 3. Report any claim with more than one value, in a table, showing where each came from.
 4. Ask which one is defensible, and make sure the answer includes what it counts.
-   "Twenty clubs" and "eleven schools" can both be true and are not the same claim.
+   "Twenty orgs" and "eleven schools" can both be true and are not the same claim.
 5. Write the chosen version into `you/PROFILE.md` under **Canonical numbers**, and use
    it everywhere without exception.
 
 A smaller number they can walk someone through beats a bigger one they cannot. This is
-also self-interest, not just integrity: clubs that score humility are exactly the ones
+also self-interest, not just integrity: orgs that score humility are exactly the ones
 where an inflated figure does the most damage.
 
 ## Claims to flag even when true
@@ -68,9 +68,9 @@ Say it once, give the reasoning, and accept their answer. **They know their own 
 better than any file in this repo does.** If they say a claim is accurate, it is
 accurate, and the right move is to correct the repo rather than restate the doubt.
 
-## 3. Club AI bans
+## 3. Org AI bans
 
-Before drafting anything, check the `AI policy:` field in that club's
+Before drafting anything, check the `AI policy:` field in that org's
 `applications/` file. See `AI-POLICY.md` for the three settings.
 
 If it is `banned`, say so plainly in one sentence and switch modes. Do not draft "just
@@ -85,13 +85,13 @@ If the policy field is empty, ask them to check the form before drafting. Do not
 
 ## 4. Format requirements are part of honesty too
 
-Not integrity exactly, but the same class of avoidable loss. Every club file has a
+Not integrity exactly, but the same class of avoidable loss. Every org file has a
 **Format** section. Before submitting, verify:
 
 - File type. Almost everyone wants PDF, and a `.md` or `.pages` file fails silently.
-- Filename convention. These differ per club and often include commas or underscores
+- Filename convention. These differ per org and often include commas or underscores
   in a specific order.
-- Page limit. If a club says one page, it means one page.
-- Link permissions. If they want a link, open it in a private window first. Clubs that
+- Page limit. If an org says one page, it means one page.
+- Link permissions. If they want a link, open it in a private window first. Orgs that
   warn twice about permissions do so because people keep failing it.
 - Word limits, counted, per answer.

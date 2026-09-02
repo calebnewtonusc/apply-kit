@@ -6,7 +6,7 @@ description: Find the question a prompt is really asking under the one it states
 # The unasked question
 
 Every prompt has a stated ask and an unstated one. **The unstated one is what gets
-scored.** A club asks "tell us about a time you worked on a team" and decides
+scored.** An org asks "tell us about a time you worked on a team" and decides
 something about you that has nothing to do with teams.
 
 This is the single highest-leverage thing in the kit. Do it for every prompt in every
@@ -16,17 +16,17 @@ application file, before any drafting starts.
 
 Ask four questions about the prompt:
 
-**1. What decision is this club making with this answer?** Not "what do they want to
-know." What are they deciding. A pro-bono consulting club asking about a social issue
+**1. What decision is this org making with this answer?** Not "what do they want to
+know." What are they deciding. A pro-bono consulting org asking about a social issue
 is deciding whether you will still show up in week nine of an unglamorous project.
 
 **2. What is the failure mode they are screening out?** Every prompt exists because
 somebody bad got in once. "Describe a conflict with a teammate" exists because they
 admitted someone who could not be told they were wrong.
 
-**3. What does this specific club worry about, given who applies to them?** A startup
-club worries about people who love the idea of startups. A service org worries about
-résumé-builders. A club that rejected you last year is asking, without saying it,
+**3. What does this specific org worry about, given who applies to them?** A startup
+org worries about people who love the idea of startups. A service org worries about
+résumé-builders. An org that rejected you last year is asking, without saying it,
 what is different now.
 
 **4. What will the reader think and never write down?** If the applicant has shipped
@@ -57,9 +57,11 @@ Rules for these blocks:
 
 ## Patterns worth knowing
 
+These run under prompts in nearly every type:
+
 | Stated prompt                   | Usually unasked                                                 |
 | ------------------------------- | --------------------------------------------------------------- |
-| Why our club                    | Why not the five others you are obviously also applying to      |
+| Why us                          | Why not the five others you are obviously also applying to      |
 | Tell us about yourself          | Can you pick one thing and go deep, or do you list              |
 | A time you failed               | Can you look at yourself honestly without turning it into a win |
 | A challenge you overcame        | Do you know the difference between hard and inconvenient        |
@@ -68,11 +70,16 @@ Rules for these blocks:
 | Your strengths and weaknesses   | Do you know how you are hard to work with                       |
 | Reapplying? Tell us more        | What is actually different since we told you no                 |
 | Optional additional materials   | Do you take the free opportunity or not                         |
-| Favorite snack / song / TV show | Do we want to sit next to you every Tuesday                     |
 
 The optional-materials one deserves emphasis. Declining an optional invitation while
 reapplying answers the real question badly. Almost nobody takes it, which is exactly
 why taking it works.
+
+**Then read the table in this application's `reference/` file.** Each type has its own
+set, and they are more useful than the general list because they carry what that
+specific kind of reader worries about. A `grant` reviewer reading your budget and a
+`student-org` officer reading your favorite snack are both asking something, and it is
+not the same something.
 
 ## Using them
 
@@ -85,7 +92,7 @@ usually a swap of story rather than a rewrite of sentences.
 
 ## Roll the repeats up
 
-When the same unasked question runs under prompts at four different clubs, put it in
+When the same unasked question runs under prompts at four different orgs, put it in
 `applications/INDEX.md` once, at the top, instead of repeating the analysis. Those
 repeated ones are the real shape of the whole cycle, and seeing them together tells
 the applicant what they are actually being evaluated on this fall.

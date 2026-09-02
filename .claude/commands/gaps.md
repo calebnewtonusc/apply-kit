@@ -9,7 +9,7 @@ what you genuinely cannot write without them, and ask **only that**.
 
 Write `GAPS.md` and tell them it is there.
 
-## Structure it by what it unblocks, not by club
+## Structure it by what it unblocks, not by org
 
 Open with the deadline math: which questions unblock which applications, and what is
 due first. Something like "Section A alone unblocks the three due Friday."
@@ -17,7 +17,7 @@ due first. Something like "Section A alone unblocks the three due Friday."
 - **Section A: blocking for the nearest deadline.** Nothing else goes here.
 - **Section B: blocking, but later.**
 - **Section C: would improve a draft, not blocking.** Explicitly optional. Say so.
-- **Section D: cannot be drafted regardless.** Clubs with AI bans, applications that
+- **Section D: cannot be drafted regardless.** Orgs with AI bans, applications that
   need a decision from someone else, anything needing a document only they can make.
   Say what you can still do for those.
 

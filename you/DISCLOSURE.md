@@ -36,11 +36,11 @@ both are worse than the fact.
 - Situation:
 - The sentence:
 
-## Per-club exceptions
+## Per-org exceptions
 
-Some clubs are the right room for something that stays out everywhere else. List them
+Some orgs are the right room for something that stays out everywhere else. List them
 and say why.
 
-| Club | Exception | Why |
+| Org | Exception | Why |
 | ---- | --------- | --- |
 |      |           |     |

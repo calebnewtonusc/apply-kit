@@ -53,4 +53,4 @@ Specific. "Unit economics and market sizing" is usable. "Business skills" is not
 
 ## What you would bring
 
-The thing you can do that most applicants to these clubs cannot.
+The thing you can do that most applicants to these orgs cannot.

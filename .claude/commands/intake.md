@@ -44,12 +44,12 @@ skills they would happily be quizzed on, commitments and weekly hours, and a
 - **Five stories, prepared cold**, per the `mock-interview` skill: something shipped,
   something handed off or lost, a collapse handled, a person helped, a time they were
   wrong. Each with the specifics.
-- **Threads.** Recurring subjects that can angle toward any club.
+- **Threads.** Recurring subjects that can angle toward any org.
 - **Dead lines.** Anything true once and false now, or true but off-limits. Quote the
   exact sentences so no future session reuses them.
 
 **`you/DISCLOSURE.md`**: what they will and will not say, with their reasoning in
-their words, and any per-club exceptions.
+their words, and any per-org exceptions.
 
 Then tell them what they now have, name the strongest piece of material in the bank
 and why, and point them at `/voice`.

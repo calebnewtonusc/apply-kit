@@ -9,7 +9,7 @@ first, because there is no point polishing a sentence that is going to change.
 
 **`/slop` → `SLOP.md`.** Sentences that read as AI-written or as generic filler. The
 portability test is the section to read: any sentence that could appear in another
-applicant's essay to another club unchanged.
+applicant's essay to another org unchanged.
 
 **`/reader` → `READER.md`.** The whole packet read as the three people who actually
 receive it. This is the one that catches what per-answer checks cannot: four "why us"
@@ -19,11 +19,18 @@ reference to something the reader does not know about you.
 **`/rank` → `RANK.md`.** Every answer ranked best to worst. Read the bottom of it.
 That is where your remaining hour goes.
 
-**`/resume` → `RESUME-SCAN.md`.** Format requirements per club, numbers checked
+**`/resume` → `RESUME-SCAN.md`.** Format requirements per org, numbers checked
 against every other document, and every claim someone could ask you to walk through.
 
 **`/interview` → `INTERVIEW-PREP.md`.** Five stories, the numbers you need cold, and
 the question you are least ready for.
+
+**`/plan` → `PLAN.md`.** A dated work plan built backward from the deadlines, with
+anything depending on another person scheduled first, because that is what actually
+runs out of time.
+
+**`/whyus` → the org's own `applications/` file.** Sourced specifics, not a review
+file, because they get used at draft time rather than read once.
 
 ## One thing worth knowing
 

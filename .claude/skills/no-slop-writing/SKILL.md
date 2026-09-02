@@ -41,7 +41,7 @@ clear, delete the aside.
 **No superficial -ing clauses.** "...highlighting my commitment to collaboration."
 This is the single most common tell in application essays.
 
-**No synonym cycling.** If the right word is "club," say "club" three times.
+**No synonym cycling.** If the right word is "org," say "org" three times.
 
 **No rule of three by default.** "Curious, driven, and collaborative." Real writing has
 uneven lists.
@@ -71,7 +71,7 @@ everyone writes them.
 ## The portability test
 
 The one test that catches everything. **Could this sentence appear in another
-applicant's essay, to another club, unchanged?**
+applicant's essay, to another org, unchanged?**
 
 If yes, it is filler, no matter how well written. Cut it or replace it with something
 that is only true here: a name, a number, a mechanism, a specific opinion someone
