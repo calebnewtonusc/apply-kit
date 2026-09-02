@@ -1,0 +1,9 @@
+# Your actual material. Uncomment the next line if you plan to make this repo public.
+# you/
+
+.DS_Store
+Thumbs.db
+*.pdf
+*.docx
+!examples/*.pdf
+.claude/settings.local.json
