@@ -53,3 +53,5 @@ The target. Every draft is trying to sound like these.
 1.
 2.
 3.
+
+<!-- TEMPLATE: unfilled. Delete this line the moment you write real content here. -->

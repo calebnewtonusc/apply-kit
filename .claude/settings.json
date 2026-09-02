@@ -1,16 +1,32 @@
 {
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh \"$CLAUDE_PROJECT_DIR/.claude/hooks/session-start.sh\""
+          }
+        ]
+      }
+    ]
+  },
   "permissions": {
     "allow": [
+      "Bash(sh tools/count.sh:*)",
       "Bash(tools/count.sh:*)",
       "Bash(./tools/count.sh:*)",
-      "Bash(chmod +x tools/count.sh)",
+      "Bash(chmod +x:*)",
       "Bash(wc:*)",
       "Bash(grep:*)",
       "Bash(rg:*)",
       "Bash(ls:*)",
       "Bash(cat:*)",
       "Bash(find:*)",
+      "Bash(date:*)",
       "Read",
+      "Write",
+      "Edit",
       "Glob",
       "Grep",
       "WebSearch",

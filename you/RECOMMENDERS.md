@@ -43,3 +43,5 @@ They want to know what happened, and you will ask them again next cycle.
 | Person | Thanked | Told the outcome |
 | ------ | ------- | ---------------- |
 |        |         |                  |
+
+<!-- TEMPLATE: unfilled. Delete this line the moment you write real content here. -->

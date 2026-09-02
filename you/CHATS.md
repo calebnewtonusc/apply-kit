@@ -27,3 +27,5 @@ deadline is the real one.
 **The one sentence from this that belongs in a draft.**
 
 ---
+
+<!-- TEMPLATE: unfilled. Delete this line the moment you write real content here. -->

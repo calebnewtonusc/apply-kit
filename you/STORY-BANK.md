@@ -60,3 +60,5 @@ say why each one is dead.
 | Dead line | Why |
 | --------- | --- |
 |           |     |
+
+<!-- TEMPLATE: unfilled. Delete this line the moment you write real content here. -->

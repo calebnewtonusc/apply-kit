@@ -33,3 +33,5 @@ forgotten until the deadline, so they go here separately.
 
 Every date above still marked unverified, listed here so you can knock them out at
 once.
+
+<!-- TEMPLATE: unfilled. Delete this line the moment you write real content here. -->

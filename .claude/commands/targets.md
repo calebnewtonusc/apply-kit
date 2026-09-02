@@ -60,6 +60,8 @@ verified or unverified. Say which day carries the most and how many days away it
 - Any org they were rejected from before, since that changes what one prompt is
   really asking.
 
-Then point them at `/extract`, one at a time, starting with the earliest deadline. If
-anything needs recommenders, point at `/recommenders` first instead, because that clock
-is already running.
+Then move into `extract.md` yourself, starting with the earliest deadline, and ask them
+to paste the actual form text for that one. If anything on the list needs recommenders,
+follow `recommenders.md` first regardless of deadline order, because that clock is
+already running and it does not wait for the rest of the process. Do not tell them to
+run a command.

@@ -52,4 +52,5 @@ skills they would happily be quizzed on, commitments and weekly hours, and a
 their words, and any per-org exceptions.
 
 Then tell them what they now have, name the strongest piece of material in the bank
-and why, and point them at `/voice`.
+and why. Then ask, in the same message, for anything they have already written, and
+move into `voice.md` yourself. Do not tell them to run a command.

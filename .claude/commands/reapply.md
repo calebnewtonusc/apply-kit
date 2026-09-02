@@ -33,7 +33,7 @@ In order of how much it is worth:
 2. **Where they got cut.** Written round or interview. These are different problems and
    the fix is not the same. Losing at the interview means the written material works,
    and more drafting is the wrong response. Route to `/interview` instead.
-3. **The old answers**, if they still have them. Run `/proven` on any that got them to
+3. **The old answers**, if they still have them. Follow `proven.md` on any that got them to
    a later round, and read the ones that did not for what a stranger would notice now.
 
 Ask, take the answer, move on. Do not spend the session speculating about why.
@@ -53,7 +53,7 @@ works.
 remember, but the point is that the new material is the argument.
 
 **Update the specifics.** A year has passed. Officers rotated, projects ended, funding
-priorities moved. Run `/whyus` fresh rather than trusting last cycle's file, and load
+priorities moved. Follow `whyus.md` fresh rather than trusting last cycle's file, and load
 the `org-research` skill for the parts that go stale.
 
 ## Then

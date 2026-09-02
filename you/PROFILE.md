@@ -54,3 +54,5 @@ Specific. "Unit economics and market sizing" is usable. "Business skills" is not
 ## What you would bring
 
 The thing you can do that most applicants to these orgs cannot.
+
+<!-- TEMPLATE: unfilled. Delete this line the moment you write real content here. -->

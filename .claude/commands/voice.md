@@ -44,4 +44,5 @@ Tell them the two or three patterns you will imitate, and the two you will avoid
 plain language. If their writing already has AI slop patterns in it from a previous
 tool, say so directly and do not adopt those.
 
-Point them at `/targets` next.
+Then move into `targets.md` yourself and start researching what is on their list. Do
+not tell them to run a command.

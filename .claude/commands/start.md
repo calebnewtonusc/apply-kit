@@ -1,8 +1,13 @@
 ---
-description: Orient a new user and tell them the one next thing to do
+description: Say where things stand and what happens next
 ---
 
-Welcome them and get them moving. Do not dump the whole system on them.
+**You should almost never need this.** The session-start hook already briefs you on
+where things stand, and `CLAUDE.md` tells you how to open. This exists for when someone
+types it, or asks "where am I."
+
+Welcome them and get them moving. Do not dump the whole system on them, and do not list
+commands back at them. They do not use commands.
 
 **First, check state** by reading:
 
@@ -26,19 +31,20 @@ Welcome them and get them moving. Do not dump the whole system on them.
    school, grants, accelerators, or a mix. A mix is normal. This decides which brief in
    `reference/` gets read before anything is written, and getting it wrong produces
    confident advice aimed at the wrong reader.
-4. **The single next command to run**, based on state:
-   - Nothing done: `/intake`. About 25 minutes, and it is the part that decides whether
-     the drafts are any good.
-   - Intake done, no voice: `/voice`, and tell them to drop old essays, a personal
-     statement, long messages, anything they wrote, into `you/uploads/` first.
-   - Voice done, no targets: `/targets`.
-   - Targets set, no application files: `/extract`, one at a time.
-   - Questions extracted: `/gaps`.
-   - Gaps answered: `/draft <org>`.
-   - Drafts exist: `/truth`, then `/slop`, then `/reader`.
+4. **Then do the next thing yourself**, based on state. Do not name a command. Just
+   start doing it:
+   - Nothing done: start the interview in `intake.md`. Ask for a resume first, since it
+     halves everything after.
+   - Intake done, no voice: ask for two things they wrote, per `voice.md`.
+   - Voice done, no targets: research the list, per `targets.md`.
+   - Targets set, no application files: ask them to paste the real form text for the
+     nearest deadline, per `extract.md`.
+   - Questions extracted: ask the blocking questions, per `gaps.md`.
+   - Gaps answered: draft it, per `draft.md`.
+   - Drafts exist: run the checks and report what you found.
 
-Then stop and let them run it. Do not run the next command for them unless they say go.
-This is the only command in the kit where you wait.
+Ask the first question of whichever of those applies, in the same message. Do not stop
+and wait for them to tell you to begin.
 
 Two things to mention once, briefly, and only if they apply:
 

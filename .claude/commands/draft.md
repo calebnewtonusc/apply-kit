@@ -52,5 +52,7 @@ Report in a short message: how many answers, how many `[NEED:]` items block
 submission, the strongest answer and why, and the weakest. Do not describe every
 answer back to them. They can read the file.
 
-Point them at `/truth` next. If any answer came back short from the counter, point at
-`/expand` first, and at `/cut` for anything over.
+Then keep going yourself. Fix any length the counter flagged, following `expand.md` for
+short answers and `cut.md` for long ones, before you show them anything. Then run the
+checks in `truth.md`. Do not tell them to run a command and do not ask whether to
+proceed.

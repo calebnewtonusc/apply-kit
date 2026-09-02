@@ -48,3 +48,5 @@ own cycle. Each needs its own plan and its own `reference/` brief.
 Anything worth one sentence and then dropping: an org whose stated focus sits oddly
 against something you said, an org that rejected you before (which changes what one of
 its prompts is really asking), an org whose recruitment could not be confirmed.
+
+<!-- TEMPLATE: unfilled. Delete this line the moment you write real content here. -->
