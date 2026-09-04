@@ -30,18 +30,25 @@ set -e
 
 TARGET="${1:-drafts}"
 
+# Draft files are named after organizations, so spaces are normal ("Troy Camp.md").
+# Collect them into "$@" rather than a word-split string, or every such file is
+# silently skipped with an "awk: can't open file" that looks like a broken tool.
 if [ -d "$TARGET" ]; then
-  FILES=$(find "$TARGET" -name '*.md' ! -name '_TEMPLATE.md' | sort)
+  set --
+  while IFS= read -r f; do
+    [ -n "$f" ] && set -- "$@" "$f"
+  done <<EOF
+$(find "$TARGET" -name '*.md' ! -name '_TEMPLATE.md' | sort)
+EOF
 else
-  FILES="$TARGET"
+  set -- "$TARGET"
 fi
 
-if [ -z "$FILES" ]; then
+if [ "$#" -eq 0 ]; then
   echo "No draft files found in $TARGET."
   exit 0
 fi
 
-# shellcheck disable=SC2086
 awk '
 function trim(s) { gsub(/^[ \t\r\n]+|[ \t\r\n]+$/, "", s); return s }
 
@@ -90,9 +97,12 @@ function finish(   body, n, pct, flag, i, w, lower, tok, q) {
   flag = "ok"
   if (limit > 0) {
     pct = n * 100 / limit
-    if (n > limit)          { flag = "OVER";  over++;  }
+    if (n > limit) {
+      if (approx) { flag = "over target" }
+      else        { flag = "OVER"; over++ }
+    }
     else if (pct < 90)      { flag = "short"; short++; }
-    printf "  %-6s %5d / %-5d %-6s  %3d%%  %s\n", qid, n, limit, unit, pct, flag
+    printf "  %-6s %5d / %-5d %-6s  %3d%%  %s%s\n", qid, n, limit, unit, pct, (approx ? "~" : ""), flag
   } else {
     printf "  %-6s %5d %-13s        no stated limit\n", qid, n, unit
   }
@@ -126,19 +136,35 @@ FNR == 1 {
   files++
 }
 
-/^## *[Qq][0-9]+[.:) ]/ {
+/^## *[Qq][0-9]+[.:) ]/ || (/^## / && /[0-9]/ && /(words?|characters?|chars?|max|maximum)/) {
   finish()
   head = $0
   qid = head
   sub(/^## */, "", qid)
-  sub(/[.:) ].*$/, "", qid)
+  if (qid ~ /^[Qq][0-9]+/) { sub(/[.:) ].*$/, "", qid) }
+  else                     { qid = substr(qid, 1, 14) }
   limit = 0
   unit = "words"
+  approx = 0
+  # Real forms seen on real applications: "(250 words)", "(max 250)",
+  # "(250 characters)", "(~100 words)", "250 words max". Reading only the first
+  # of those silently treats every other limit as no limit at all.
   if (match(head, /[0-9]+ *(words?|characters?|chars?)/)) {
     spec = substr(head, RSTART, RLENGTH)
     limit = spec + 0
     if (spec ~ /char/) unit = "chars"
+  } else if (match(head, /(max|maximum|up to|no more than|limit:?) *[0-9]+/)) {
+    spec = substr(head, RSTART, RLENGTH)
+    sub(/[^0-9]+/, "", spec)
+    limit = spec + 0
+    if (head ~ /char/) unit = "chars"
+  } else if (match(head, /\([0-9]+\)/)) {
+    spec = substr(head, RSTART + 1, RLENGTH - 2)
+    limit = spec + 0
   }
+  # "~100" and "about 100" are targets the org wrote loosely. Count them, show
+  # them, but do not block a submission on being a few words past a tilde.
+  if (limit > 0 && match(head, /(~|about|around|roughly) *[0-9]+/)) approx = 1
   inq = 1
   buf = ""
   next
@@ -161,4 +187,4 @@ END {
   }
   print ""
 }
-' $FILES
+' "$@"
