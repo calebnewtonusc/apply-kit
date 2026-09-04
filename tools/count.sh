@@ -14,7 +14,14 @@
 #   ## Q4. Tell us about yourself (500 characters)
 #
 # The answer is everything between that heading and the first line starting
-# with **Count:, **Story, **Needs, ---, or the next ## heading.
+# with **Count:, **Story, **Needs, **123 words.**, ---, or the next ## heading.
+#
+# If any line in that span is a blockquote, the blockquote is treated as the
+# answer and the surrounding prose as commentary. Both draft shapes work:
+#
+#   ## Q1. Why us? (200 words)        ## Q1. Why us? (200 words)
+#   The answer text.                  > The answer text.
+#   **Count:** 000 / 200              **185 words.** Notes about it.
 #
 # Exit 1 if anything is over its limit or still has a [NEED:] marker, so it
 # can be used as a submission gate.
@@ -50,9 +57,27 @@ function chars(s) {
   return length(trim(s))
 }
 
-function finish(   body, n, pct, flag, i, w, lower, tok) {
+function quoted(s,   i, n, a, out, line) {
+  # If any line is a blockquote, the blockquote is the answer and everything
+  # else in the section is commentary written by the agent. Counting that prose
+  # is how a 185-word answer gets reported as 252 and then wrongly cut.
+  n = split(s, a, /\n/)
+  out = ""
+  for (i = 1; i <= n; i++) {
+    line = a[i]
+    if (line ~ /^[ \t]*>/) {
+      sub(/^[ \t]*>[ ]?/, "", line)
+      out = out "\n" line
+    }
+  }
+  return out
+}
+
+function finish(   body, n, pct, flag, i, w, lower, tok, q) {
   if (!inq) return
   body = buf
+  q = quoted(body)
+  if (trim(q) != "") body = q
   needs_here = gsub(/\[NEED:[^]]*\]/, "X", body)
   total_needs += needs_here
   gsub(/\*\*/, "", body)
@@ -119,7 +144,8 @@ FNR == 1 {
   next
 }
 
-/^\*\*(Count|Story|Needs)/ { finish(); next }
+/^\*\*(Count|Story|Needs)/                     { finish(); next }
+/^\*\*[0-9]+ *(words?|characters?|chars?)[.,]?\*\*/ { finish(); next }
 /^---[ \t]*$/             { finish(); next }
 /^## /                    { finish(); next }
 
