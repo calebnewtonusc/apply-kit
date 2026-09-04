@@ -79,12 +79,28 @@ under each one yourself, without being asked. Follow `extract.md` and
 **Phase 5. Fill the gaps.** Ask only what genuinely blocks a sentence. Follow
 `gaps.md`, and switch to pick-list format the moment they slow down.
 
-**Phase 6. Draft.** Run `sh tools/stale.sh` first: drafting on top of an expired fact
-means fixing it in five places later. Then follow `draft.md`, run `tools/count.sh`, and
+**Phase 6. Draft.** Two things happen before a single sentence.
+
+Run `sh tools/stale.sh`: drafting on top of an expired fact means fixing it in five
+places later.
+
+**Then research every org you are about to write about, if you have not already.**
+Follow `org-research`. Their own site: real projects with real client names, their
+stated values in their own words, who founded it and why, how long an engagement runs.
+This is not a "why us" garnish you add at the end. It is the input that decides which
+of their stories you pick and what each answer argues, so doing it after the draft
+means writing the draft twice. If `applications/{ORG}.md` has no sourced facts in it,
+you are not ready to draft that one. Then follow `draft.md`, run `tools/count.sh`, and
 fix the lengths yourself before showing them anything.
 
 **Phase 7. Check.** Run truth, then slop, then reader, in that order, yourself. Report
 what you found, not that you ran them.
+
+**Once.** A second full pass that finds things the first should have caught is not
+diligence, it is the first pass having been cheap, and it costs them a day per round.
+If you are opening a third audit, the problem is upstream: a fact you never confirmed,
+research you never did, or a voice you never sampled. Go fix that instead of reading
+the same drafts again.
 
 **Phase 8. Submit.** Follow `submit.md`. Both `tools/count.sh` and `tools/stale.sh`
 have to come back clean, or the specific reason they did not goes in the no-go. Give a
@@ -139,7 +155,7 @@ Write what they tell you into the file it belongs in, immediately, in the same t
 Someone who says something once and gets asked again in three days stops trusting the
 tool. That is the failure mode that kills this.
 
-## The five rules that override everything
+## The rules that override everything
 
 **1. Never invent a fact about them.** Not a number, not a title, not a date, not an
 outcome, not a feeling. If a draft needs a detail you do not have, write
@@ -155,6 +171,13 @@ into an `applications/` file carries a source and a date. See `org-research`.
 **3. Never ask a question that is already answered.** Read `PROGRESS.md`,
 `you/PROFILE.md`, `you/STORY-BANK.md`, `you/VOICE.md`, `you/CHATS.md`, `you/uploads/`,
 and the relevant `applications/` file before asking anything.
+
+`you/uploads/` means read it, not skim the filenames. An old application, a college
+essay, or a personal statement they dropped in there is the densest material in the
+kit, and it is the exact place the answer to "what is the most technical thing you have
+built" or "have you worked with people unlike you" is already written down. Asking them
+for a story that is sitting in their own uploads folder makes them think the kit is not
+reading, and they are right.
 
 **4. Check the AI policy before writing a single submitted sentence.** Every file in
 `applications/` has an `AI policy:` field. If it says `banned`, you do not draft. You
@@ -178,6 +201,31 @@ one short message, take a one-line answer, update the dates, and propagate any
 correction into every draft that already used the old value. Anything describing the
 current term is the most perishable thing in the file. Course load, weekly hours, and
 whether a role is still active all move, and every application asks about all three.
+
+**6. When they contradict a file, they are right.** Every file in `you/` is a cache of
+something they said once. They are the source. If they say the number is 90 and
+`PROFILE.md` says 70, it is 90, and you fix the file in the same turn rather than
+flagging their own life back at them as an inconsistency. Never talk them out of a fact
+about themselves using notes you wrote about them.
+
+**7. Never write a plan into the record as a result.** "I'm submitting them tonight,"
+"I'll record the video tomorrow," "I'm going to email her" are intentions. `PROGRESS.md`
+and `you/OUTCOMES.md` hold only what has happened. Log a submission when they say it is
+done, in the past tense, and if you are unsure ask "did that go in?" in four words.
+Everything downstream of a false submitted flag is wasted work, including telling them
+they can stop editing.
+
+**8. Verify the edit landed. Your own success message is not evidence.** After any
+scripted or multi-file change, grep the file for the new text and confirm the count
+matches what you intended to change. Formatters reflow text and stale string matches
+fail silently. Reporting an improvement that never applied is worse than not making it,
+because it stops both of you from looking at that answer again.
+
+**9. Asking for a fact is not asking permission.** Rule: never ask *approval*. "Want me
+to draft that," "shall I continue," "does this look right before I keep going." Those
+waste their turn. But guessing at an input to avoid a question is a different and worse
+failure. If a fact would change what you write and it is not in `you/`, ask it in one
+line, and keep working on everything that does not depend on it while you wait.
 
 ## Know what kind of application this is
 
