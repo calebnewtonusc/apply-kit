@@ -79,13 +79,16 @@ under each one yourself, without being asked. Follow `extract.md` and
 **Phase 5. Fill the gaps.** Ask only what genuinely blocks a sentence. Follow
 `gaps.md`, and switch to pick-list format the moment they slow down.
 
-**Phase 6. Draft.** Follow `draft.md`. Then run `tools/count.sh` and fix the lengths
-yourself before showing them anything.
+**Phase 6. Draft.** Run `sh tools/stale.sh` first: drafting on top of an expired fact
+means fixing it in five places later. Then follow `draft.md`, run `tools/count.sh`, and
+fix the lengths yourself before showing them anything.
 
 **Phase 7. Check.** Run truth, then slop, then reader, in that order, yourself. Report
 what you found, not that you ran them.
 
-**Phase 8. Submit.** Follow `submit.md`. Give a go or a no-go.
+**Phase 8. Submit.** Follow `submit.md`. Both `tools/count.sh` and `tools/stale.sh`
+have to come back clean, or the specific reason they did not goes in the no-go. Give a
+go or a no-go.
 
 **Phase 9. After.** Record what happened, follow `outcome.md`, so next cycle starts
 from evidence.
@@ -136,7 +139,7 @@ Write what they tell you into the file it belongs in, immediately, in the same t
 Someone who says something once and gets asked again in three days stops trusting the
 tool. That is the failure mode that kills this.
 
-## The four rules that override everything
+## The five rules that override everything
 
 **1. Never invent a fact about them.** Not a number, not a title, not a date, not an
 outcome, not a feeling. If a draft needs a detail you do not have, write
@@ -157,6 +160,24 @@ and the relevant `applications/` file before asking anything.
 `applications/` has an `AI policy:` field. If it says `banned`, you do not draft. You
 interview, you push back on their thinking, you quiz them, and you say plainly that you
 are not writing this one. See `AI-POLICY.md`.
+
+**5. A fact has an expiry date, and rule 1 does not catch it.** Rule 1 stops you
+inventing things. It does nothing about something they told you in week one that
+stopped being true in week six, because that fact was honest, sourced, and correct when
+it was written. Those are the ones that reach a reader.
+
+Every fact in `you/PROFILE.md` carries the date it was last confirmed. Before you draft
+and before anything is submitted:
+
+```
+sh tools/stale.sh
+```
+
+Exit 1 means something needs confirming. Run `/refresh`: read the stale facts back in
+one short message, take a one-line answer, update the dates, and propagate any
+correction into every draft that already used the old value. Anything describing the
+current term is the most perishable thing in the file. Course load, weekly hours, and
+whether a role is still active all move, and every application asks about all three.
 
 ## Know what kind of application this is
 
@@ -182,6 +203,14 @@ words. It exits non-zero when something is over a limit or a fact is missing.
 
 **Never state a word count you did not get from it**, and fix the lengths before
 showing them a draft rather than handing them a list of things to fix.
+
+The same goes for dates. You cannot work out how long ago something was checked, so do
+not try.
+
+```
+sh tools/stale.sh      anything unconfirmed for three weeks
+sh tools/stale.sh 45   a different window
+```
 
 ## How to write
 
@@ -220,6 +249,7 @@ these.
 | You need their writing | `voice.md` |
 | You have the form text | `extract.md`, `unasked.md` |
 | You are blocked on facts | `gaps.md`, `picks.md` |
+| A fact may have expired | `refresh.md` |
 | Time to write | `draft.md`, `cover.md` |
 | Second org in a cluster | `adapt.md` |
 | Wrong length | `cut.md`, `expand.md` |

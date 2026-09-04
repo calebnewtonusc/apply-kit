@@ -39,6 +39,18 @@ echo "extracted: $(count_md applications) application file(s)"
 echo "drafted:   $(count_md drafts) draft file(s)"
 filled you/OUTCOMES.md && echo "outcomes:  past cycles recorded, READ THEM before advising"
 
+# Facts that were true when written and may not be now. Only meaningful once
+# there is a filled profile, so a cold start never sees this.
+if filled you/PROFILE.md; then
+  STALE=$(sh tools/stale.sh 2>/dev/null | grep -oE '[0-9]+ stale, [0-9]+ never checked' | head -1)
+  if [ -n "$STALE" ]; then
+    case "$STALE" in
+      "0 stale, 0 never checked") echo "facts:     all confirmed recently" ;;
+      *) echo "facts:     $STALE. Run /refresh BEFORE drafting or submitting anything." ;;
+    esac
+  fi
+fi
+
 if filled DEADLINES.md; then
   UPCOMING=$(grep -E '^\|' DEADLINES.md 2>/dev/null | grep -vE '^\| *(Date|-|:)' | grep -cE '[0-9]')
   echo "deadlines: $UPCOMING dated row(s). Check what is nearest before anything else."
@@ -56,3 +68,7 @@ echo "concrete question or the next thing you already did."
 echo ""
 echo "If everything above is EMPTY, this is a cold start. The first question is what they are"
 echo "applying to and when it is due, not a 25-minute interview."
+echo ""
+echo "If the facts line above reports anything stale, run /refresh early, in one short"
+echo "message, before you draft. A fact that was true in week one and is not true now will"
+echo "pass every other check in this kit."

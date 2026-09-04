@@ -113,6 +113,32 @@ sh tools/count.sh drafts/RISE.md  one file
 
 Nothing in the kit reports a count it did not get from there.
 
+## It notices when a fact goes out of date
+
+This is the mistake that actually gets people, and almost nothing is built to catch it.
+
+You tell it in week one that you are taking eighteen units. You drop a class at
+add/drop. Six weeks later four applications say eighteen units. Nobody lied, nothing was
+invented, and every check passes, because the number was true when it was written. Then
+an interviewer asks what you are taking this term and your answer does not match the
+form you sent.
+
+So every fact about you carries the date it was last confirmed, and the kit reads them
+back before a submission:
+
+```
+sh tools/stale.sh      anything unconfirmed for three weeks
+sh tools/stale.sh 45   a different window
+```
+
+You get one short message with the four or five things worth re-checking, you answer in
+a line, and it fixes the value everywhere it already appears rather than just in one
+file. It will not ask about anything it confirmed recently, and it will not do this on
+your first day, when nothing has had time to change.
+
+The things that move: GPA, graduation date, course load, hours per week, and whether a
+role you listed is still active. Every application asks about at least three of those.
+
 ## Orgs that ban AI
 
 Some do, explicitly, in the application. It is most common with student orgs. Tell the
@@ -129,7 +155,7 @@ applications/   One file per org: their real questions, unasked questions, forma
 drafts/         Your answers, one file per org
 review/         What the checking passes found
 reference/      One brief per application type. The agent reads the one that applies
-tools/          The word counter
+tools/          The word counter and the staleness checker
 examples/       Two filled-in org files, a student org and a job, to show the difference
 TARGETS.md      The list
 DEADLINES.md    Dates, including the ones that depend on other people
@@ -145,7 +171,14 @@ first.
 
 ## Troubleshooting
 
-**`tools/count.sh: permission denied`.** Run `chmod +x tools/count.sh` once.
+**`permission denied` on anything in `tools/`.** Run `chmod +x tools/*.sh` once. This
+happens when you downloaded the ZIP instead of cloning, which strips the executable bit.
+Running them as `sh tools/count.sh` works either way.
+
+**It keeps asking me to confirm facts I already gave it.** It should only ask about
+things unconfirmed for three weeks, and never about anything current. If it is asking
+about something you just told it, the date did not get written down: say so, and tell it
+to stamp the `Checked` column.
 
 **The counter finds no answers.** It reads headings shaped like `## Q1. The prompt (250
 words)`. Claude writes them that way. If you wrote a draft by hand, match that shape.
@@ -180,6 +213,7 @@ step, and because seeing the list explains what the thing actually does.
 | `/voice` | Reads writing you have already done so drafts sound like you, not like an AI |
 | `/gaps` | Asks only the questions that are actually blocking a draft |
 | `/picks` | Gives you multiple choice built from your own material. Answer with letters |
+| `/refresh` | Reads back the facts that have gone stale and confirms each is still true |
 
 **Working out what they actually want**
 

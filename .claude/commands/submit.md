@@ -6,8 +6,23 @@ argument-hint: [org name]
 Run every check for **$1** and give a go or no-go. Be honest. A no-go the night before
 is worth more than a reassuring yes.
 
-Start with `tools/count.sh drafts/<Org>.md`. It exits non-zero when an answer is over
-its limit or a `[NEED:]` marker is still open, and both of those are automatic no-gos.
+Start with two mechanical checks. Both exit non-zero on a real problem and both catch
+things you cannot catch by reading.
+
+```
+sh tools/count.sh drafts/<Org>.md
+sh tools/stale.sh
+```
+
+`count.sh` fails when an answer is over its limit or a `[NEED:]` marker is still open.
+Both are automatic no-gos.
+
+`stale.sh` fails when a fact has not been confirmed in three weeks. **Do not wave this
+one through.** It is the check that catches the true-when-written number, and it is the
+last moment anybody looks at it before a stranger does. Run `/refresh` and get the
+answer. If they are mid-submission and will not stop, say which specific facts are
+going out unverified and let them decide with that in front of them.
+
 Then read that type's file in `reference/` and check its format traps specifically.
 
 ## Checklist
@@ -28,6 +43,9 @@ Then read that type's file in `reference/` and check its format traps specifical
 **Truth**
 
 - [ ] Every number matches **Canonical numbers** in `you/PROFILE.md`
+- [ ] `sh tools/stale.sh` clean, or every stale fact confirmed this session
+- [ ] Anything describing the current term (course load, hours per week, current
+      roles) confirmed since the term actually started
 - [ ] Every claim on the resume matches every claim in the essays
 - [ ] Dead-lines grep for this org run and clean
 - [ ] Nothing crosses a boundary in `you/DISCLOSURE.md`

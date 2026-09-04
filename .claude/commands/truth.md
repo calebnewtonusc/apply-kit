@@ -25,7 +25,8 @@ one value goes in a table:
 
 Then ask which is defensible and what exactly it counts. Two different countings of
 the same thing can both be true and are not the same claim. Once they choose, write it
-into **Canonical numbers** in `you/PROFILE.md` and update every draft to match.
+into **Canonical numbers** in `you/PROFILE.md` and update every draft to match. Set
+that row's `Checked` date to today, since they just confirmed it.
 
 ## 3. Claims that read bigger than the thing
 

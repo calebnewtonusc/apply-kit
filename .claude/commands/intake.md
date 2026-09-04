@@ -38,6 +38,16 @@ the uploads already answered.
 skills they would happily be quizzed on, commitments and weekly hours, and a
 **Canonical numbers** section that every other document must match.
 
+**Stamp today's date in the `Checked` column of every row you write, and on every line
+in Basics.** Get it from `date +%Y-%m-%d` rather than guessing. This costs nothing now
+and is the only thing that will catch a fact going stale six weeks from now, which is
+the failure this kit is most likely to ship. A row with no date is treated as never
+confirmed.
+
+Two of these are perishable enough to say out loud when you write them down: **course
+load and weekly hours change at add/drop**, usually about three weeks after somebody
+first tells you, and every application asks about both.
+
 **`you/STORY-BANK.md`**: the material, organized as:
 
 - **The lead.** Their single strongest thing, stated as a contestable claim.
