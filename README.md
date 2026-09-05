@@ -131,6 +131,43 @@ sh tools/stale.sh      anything unconfirmed for three weeks
 sh tools/stale.sh 45   a different window
 ```
 
+### Does it still sound like you
+
+`tools/count.sh` catches a draft that is too long. It cannot catch a draft that
+is the right length and sounds like somebody else wrote it, and that is the
+failure that actually loses applications.
+
+```
+python3 tools/voice-check.py drafts/*.md
+python3 tools/voice-check.py --verbose drafts/SOMECLUB.md
+```
+
+It flags the tells people name when they read their own draft back and wince:
+"it's not X, it's Y," announcing a turn instead of turning, a manufactured
+closing line on every paragraph, hedging against a worry nobody raised, uniform
+sentence length, formal constructions where you would have used a contraction,
+and answers containing no name and no number, which is the definition of an
+answer anyone could have submitted.
+
+It exits 1 on anything serious, so it works as a submission gate.
+
+### The fact guard
+
+Put one regex per line in a `.factguard` file next to your drafts, for every
+claim you have checked and found false:
+
+```
+# "permitted home cooks in California" - traces to no source
+1,?178
+# no payment ever ran, and the number five has no source
+\bfive orders end to end\b
+```
+
+This exists because a single unsourced number, written once, quietly reached six
+drafts before anybody re-checked it. Numbers propagate faster than anyone
+re-verifies them, and one invented specific in something going out under your
+name is worse than six open `[NEED:]` markers.
+
 You get one short message with the four or five things worth re-checking, you answer in
 a line, and it fixes the value everywhere it already appears rather than just in one
 file. It will not ask about anything it confirmed recently, and it will not do this on
@@ -155,7 +192,7 @@ applications/   One file per org: their real questions, unasked questions, forma
 drafts/         Your answers, one file per org
 review/         What the checking passes found
 reference/      One brief per application type. The agent reads the one that applies
-tools/          The word counter and the staleness checker
+tools/          The word counter, the voice checker, and the staleness checker
 examples/       Two filled-in org files, a student org and a job, to show the difference
 TARGETS.md      The list
 DEADLINES.md    Dates, including the ones that depend on other people
