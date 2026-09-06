@@ -167,6 +167,20 @@ def check(path):
                                  f"stdev {sd:.1f} over {len(lens)} sentences, mean {statistics.mean(lens):.0f}. "
                                  f"Real writing varies hard: mostly long, with a short one for the hit."))
                 worst = max(worst, 2)
+            # Stacked short sentences. One short line after a long one is a hit;
+            # two or three in a row is the rhythm people mean by "punchy," and it
+            # is the single most common note a writer gives back on a draft.
+            runs, run = [], 0
+            for n in lens:
+                run = run + 1 if n <= 6 else 0
+                runs.append(run)
+            if max(runs) >= 2:
+                worst_i = runs.index(max(runs))
+                frag = " / ".join(sents[max(0, worst_i - max(runs) + 1):worst_i + 1])
+                findings.append((3, "stacked-fragments", head[:44],
+                                 f"{max(runs)} sentences of 6 words or fewer back to back: {frag[:90]}"))
+                worst = 3
+
             if statistics.mean(lens) < 9:
                 findings.append((3, "third-grader", head[:44],
                                  f"mean sentence {statistics.mean(lens):.0f} words. "
