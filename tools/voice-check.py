@@ -28,7 +28,10 @@ FILES = [a for a in sys.argv[1:] if not a.startswith("--")]
 RULES = [
     ("x-not-y", 3, [
         r"\b(is|was|are|were|it's|its)\s+not\s+[^.!?]{3,60}?,\s*(it'?s|it is|they'?re|but)\b",
-        r"\b(isn't|wasn't|aren't|weren't)\s+[^.!?]{3,60}?,?\s+(it'?s|it is|they'?re)\b",
+        # Require the comma. Without it this fires on ordinary comparisons like
+        # "I can list what it isn't faster than what it is," which is not the
+        # rhetorical reveal being banned.
+        r"\b(isn't|wasn't|aren't|weren't)\s+[^.!?,]{3,60},\s+(it'?s|it is|they'?re)\b",
         r"\bnot\s+(just|only|merely)\s+[^.!?]{3,50}?,\s*but\b",
         r"\bthe (question|point|problem|issue|thing) (isn't|is not)\b",
     ]),
