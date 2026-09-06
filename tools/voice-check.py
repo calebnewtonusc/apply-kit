@@ -112,6 +112,10 @@ def is_prompt(head):
     h = head.lower()
     if any(s in h for s in skip):
         return False
+    # Yes/no logistics fields are not prose. "Yes." is the correct answer and
+    # should never be scored for rhythm.
+    if re.match(r"^(can |are you|will you|do you|have you|is there|would you)\b", h, re.I):
+        return False
     return bool(IS_PROMPT.search(head))
 
 
