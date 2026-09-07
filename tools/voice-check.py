@@ -147,6 +147,16 @@ def prompt_clauses(head):
     return max(n, 1)
 
 
+def norm(s):
+    return re.sub(r"\s+", " ", s).strip().lower()
+
+
+def clause_block(text):
+    """The file's own 'Prompt clauses' section, if it wrote one."""
+    m = re.search(r"^#{2,3} Prompt clauses[^\n]*\n(.*?)(?=\n#{2,3} |\Z)", text, re.S | re.M)
+    return m.group(1) if m else None
+
+
 def sentences(body):
     return [s.strip() for s in re.split(r"(?<=[.!?])\s+", body) if s.strip()]
 
@@ -219,10 +229,47 @@ def check(path):
                 findings.append((1, "possible-kicker", head[:44], last))
                 worst = max(worst, 1)
 
+        # A prompt with two asks is two questions, and answering one is the
+        # single most common rejection cause. Advisory was not enough: this ran
+        # at INFO behind --verbose all through the TCG night and four drafts in
+        # a row answered half the prompt. It is now a hard check, and each ask
+        # has to be anchored to a phrase that actually appears in the answer, so
+        # a clause block left stale by a rewrite fails instead of passing.
         cl = prompt_clauses(head)
-        if cl > 1 and VERBOSE:
-            findings.append((0, "clauses", head[:44],
-                             f"{cl} asks in this prompt. Confirm each is answered."))
+        if cl > 1:
+            block = clause_block(text)
+            if not block:
+                findings.append((3, "unmapped-clauses", head[:44],
+                                 f"{cl} asks in this prompt and no 'Prompt clauses' block in "
+                                 f"the file. Write one numbered line per ask, each quoting the "
+                                 f'phrase from the answer that satisfies it: 1. why them -> "..."'))
+                worst = 3
+            else:
+                hits = [q for q in re.findall(r'"([^"]{8,})"', block) if norm(q) in norm(body)]
+                if len(hits) < cl:
+                    findings.append((3, "unanswered-clause", head[:44],
+                                     f"{cl} asks in this prompt, {len(hits)} anchored to text that is "
+                                     f"actually in this answer. Either an ask is unanswered or the "
+                                     f"clause block is stale after a rewrite."))
+                    worst = 3
+
+    # A deadline with no source is how LACI was missed: a note said 11:59 PM,
+    # their site said the cycle closes at 9:00 PM, and nobody re-read it on the
+    # day. Every paste-ready file has to say where its deadline came from.
+    base = path.split("/")[-1]
+    if "SUBMIT" in base.upper() or "FINAL" in base.upper():
+        m = re.search(r"^\*\*(Due|MISSED|DUE)[^\n]*", text, re.M)
+        if not m:
+            findings.append((2, "no-deadline-line", base[:44],
+                             "No '**Due ...**' line in a paste-ready file. State the deadline "
+                             "and where it came from."))
+            worst = max(worst, 2)
+        elif not re.search(r"(https?://|\.org|\.com|\.edu|confirmed (on|by)|read \d{4}-\d{2}-\d{2})",
+                           m.group(0), re.I):
+            findings.append((2, "unsourced-deadline", base[:44],
+                             m.group(0)[:110] + "  <- no source. Cite the page or say who "
+                             "confirmed it and when. Never inherit a time from an older note."))
+            worst = max(worst, 2)
 
     return findings, worst
 
