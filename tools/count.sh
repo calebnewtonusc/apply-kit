@@ -28,6 +28,25 @@
 
 set -e
 
+# EVERY drafting command runs through this script, which makes it the one place
+# in the kit a gate cannot be walked around. /draft, /cut, /expand, /status and
+# /submit all call it, so the essay rules print on every one of them rather than
+# once in a file somebody read in phase one and forgot by phase seven.
+#
+# FAILS CLOSED. craft-gate is vendored into tools/ so this kit stays standalone,
+# and if it has gone missing the count refuses rather than quietly proceeding.
+# A gate that passes when it could not check is worse than no gate.
+HERE="$(dirname "$0")"
+if [ -x "$HERE/craft-gate" ]; then
+  python3 "$HERE/craft-gate" application-essay || exit 1
+elif command -v craft-gate >/dev/null 2>&1; then
+  craft-gate application-essay || exit 1
+else
+  echo "count.sh: tools/craft-gate is missing, so nothing here knows what makes" >&2
+  echo "          a good application essay. Refusing to count. Restore it from git." >&2
+  exit 1
+fi
+
 TARGET="${1:-drafts}"
 
 # Draft files are named after organizations, so spaces are normal ("Troy Camp.md").
