@@ -40,9 +40,6 @@ per org and cost people applications.
 transcript, take-home, letters. List them with their exact specs and hand them to
 `/materials`. These fail applications quietly and nobody writes back to say which one.
 
-**AI policy.** Look for it in the form text. Set the field to `allowed`, `disclosed`,
-`banned`, or `unstated`. If banned, put the org's exact wording in the file.
-
 **Which stories to pull** from `you/STORY-BANK.md` for each prompt, and why.
 
 **Dead lines**: a grep list of phrases from their bank that must not appear in this

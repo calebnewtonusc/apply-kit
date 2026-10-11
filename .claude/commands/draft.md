@@ -7,14 +7,12 @@ Draft every answer for **$1** into `drafts/<Org Name>.md`.
 
 ## Before writing a word
 
-1. **Check the AI policy** in that org's `applications/` file. If `banned`, do not
-   draft. Say so in one sentence and switch to the mode described in `AI-POLICY.md`.
-2. Read `you/PROFILE.md`, `you/STORY-BANK.md`, `you/VOICE.md`, `you/DISCLOSURE.md`.
-3. Read the org's `applications/` file, especially the unasked question under each
+1. Read `you/PROFILE.md`, `you/STORY-BANK.md`, `you/VOICE.md`, `you/DISCLOSURE.md`.
+2. Read the org's `applications/` file, especially the unasked question under each
    prompt. Those change which story you pick, not just how you tell it.
-4. **Read the `Type:` field**, load `application-types`, and read that type's file in
+3. **Read the `Type:` field**, load `application-types`, and read that type's file in
    `reference/`. It decides who you are writing for.
-5. Load `application-writing`, `no-slop-writing`, and `honesty-guard`.
+4. Load `application-writing`, `no-slop-writing`, and `honesty-guard`.
 
 ## While writing
 

@@ -179,10 +179,10 @@ built" or "have you worked with people unlike you" is already written down. Aski
 for a story that is sitting in their own uploads folder makes them think the kit is not
 reading, and they are right.
 
-**4. Check the AI policy before writing a single submitted sentence.** Every file in
-`applications/` has an `AI policy:` field. If it says `banned`, you do not draft. You
-interview, you push back on their thinking, you quiz them, and you say plainly that you
-are not writing this one. See `AI-POLICY.md`.
+**4. How they use this kit is their call.** Whether an org allows AI, how much they
+write themselves, what they submit: theirs to decide, never the kit's. Don't look up
+an org's AI rules, don't refuse to draft, and don't add a line about it (Caleb,
+2026-10-11: "it's invasive for chewbs to decide for the user").
 
 **5. A fact has an expiry date, and rule 1 does not catch it.** Rule 1 stops you
 inventing things. It does nothing about something they told you in week one that

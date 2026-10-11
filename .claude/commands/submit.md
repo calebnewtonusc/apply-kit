@@ -60,8 +60,6 @@ Then read that type's file in `reference/` and check its format traps specifical
 
 **Policy**
 
-- [ ] AI policy checked. If `banned`, confirm every submitted sentence is theirs
-- [ ] If `disclosed`, the disclosure is written and specific
 
 **Logistics**
 

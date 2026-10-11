@@ -51,5 +51,3 @@ Two things to mention once, briefly, and only if they apply:
 - **If anything on their list needs recommenders**, say that the letter clock is already
   running and `/recommenders` comes before drafting. This is the most common way a
   finished application still fails.
-- **If any org bans AI in recruitment**, tell them to say so now and you will not write
-  anything they submit for that one.

@@ -68,8 +68,3 @@ Off the page in front of them, line by line. "Walk me through that number" is th
 default follow-up. Consulting and venture groups run cases and expect you to ask
 clarifying questions and say "let me take thirty seconds to structure this," which is
 scored rather than penalized.
-
-## AI policy
-
-The one type where explicit bans are common, usually in an honor-code checkbox near
-the top of the form. Check every form and set the field. See `AI-POLICY.md`.

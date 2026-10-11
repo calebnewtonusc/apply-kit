@@ -1,6 +1,6 @@
 # [Org Name] draft
 
-**Drafted [date].** Source: `applications/[Org Name].md`. AI policy: [policy].
+**Drafted [date].** Source: `applications/[Org Name].md`.
 
 ## Q1. [prompt verbatim] ([limit])
 

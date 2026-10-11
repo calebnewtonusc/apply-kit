@@ -12,9 +12,9 @@ _(empty until `/extract` and `/unasked` have run on several orgs)_
 
 ## Orgs
 
-| File | Org | Type | Deadline | Questions | Drafted | AI policy |
-| ---- | --- | ---- | -------- | --------- | ------- | --------- |
-|      |     |      |          |           |         |           |
+| File | Org | Type | Deadline | Questions | Drafted |
+| ---- | --- | ---- | -------- | --------- | ------- |
+|      |     |      |          |           |         |
 
 ## Clusters
 

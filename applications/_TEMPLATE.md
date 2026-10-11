@@ -11,7 +11,6 @@
 | Info sessions  | Dates and locations                             |
 | Admit rate     | If published. It is a rate, not a verdict       |
 | Applied before | Yes / no, and the outcome                       |
-| **AI policy**  | `allowed` / `disclosed` / `banned` / `unstated` |
 
 ## Format requirements
 

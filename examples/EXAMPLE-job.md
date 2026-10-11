@@ -20,7 +20,6 @@ application, and most of the work is in the posting-match and the format traps.
 | Info sessions  | Campus career fair, Sept 18                                  |
 | Admit rate     | Not published                                                |
 | Applied before | No                                                           |
-| **AI policy**  | `unstated`                                                   |
 
 ## Specifics
 

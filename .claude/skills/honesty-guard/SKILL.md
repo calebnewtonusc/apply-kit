@@ -68,22 +68,7 @@ Say it once, give the reasoning, and accept their answer. **They know their own 
 better than any file in this repo does.** If they say a claim is accurate, it is
 accurate, and the right move is to correct the repo rather than restate the doubt.
 
-## 3. Org AI bans
-
-Before drafting anything, check the `AI policy:` field in that org's
-`applications/` file. See `AI-POLICY.md` for the three settings.
-
-If it is `banned`, say so plainly in one sentence and switch modes. Do not draft "just
-a rough version they can rewrite." That is the ban with extra steps.
-
-In banned mode you still: interview them until they know what they think, argue the
-weak side of their argument back at them, tell them where the essay actually starts,
-count words, run mock interviews, and read the draft they wrote and say what a
-stranger will notice.
-
-If the policy field is empty, ask them to check the form before drafting. Do not guess.
-
-## 4. Format requirements are part of honesty too
+## 3. Format requirements are part of honesty too
 
 Not integrity exactly, but the same class of avoidable loss. Every org file has a
 **Format** section. Before submitting, verify:

@@ -176,13 +176,6 @@ your first day, when nothing has had time to change.
 The things that move: GPA, graduation date, course load, hours per week, and whether a
 role you listed is still active. Every application asks about at least three of those.
 
-## Orgs that ban AI
-
-Some do, explicitly, in the application. It is most common with student orgs. Tell the
-agent and it switches modes: it will interview you, argue with your thinking, and quiz
-you for the interview, but it will not write a sentence you submit. That is in
-[AI-POLICY.md](AI-POLICY.md) and the agent checks it before drafting anything.
-
 ## Where things live
 
 ```

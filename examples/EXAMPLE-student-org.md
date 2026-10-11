@@ -21,7 +21,6 @@ work happens.
 | Info sessions  | Sept 2, 8pm, JFF 239                                               |
 | Admit rate     | 8 to 15 per cycle out of roughly 160                               |
 | Applied before | Yes, rejected spring 2026, written round passed                    |
-| **AI policy**  | `unstated`                                                         |
 
 ## Format requirements
 
