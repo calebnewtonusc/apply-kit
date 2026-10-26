@@ -312,3 +312,5 @@ these.
 | They got an interview | `interview.md` |
 | They heard back | `outcome.md`, `proven.md` |
 | They were rejected here before | `reapply.md` |
+
+Coaching someone else's college app: read `reference/college-coach.md` first.
