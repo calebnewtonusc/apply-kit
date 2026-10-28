@@ -14,19 +14,59 @@ to. Every fact in a draft either came out of your mouth or is marked `[NEED: ...
 until you fill it in. Every claim about the org carries a source and the date it was
 checked.
 
-## Setup, about five minutes
+## Start here: one paste, in the Code tab
+
+Open the Claude desktop app ([download it here](https://claude.com/download)) and click
+the `</>` icon at the top left to switch to the Code tab. The regular chat tab can't
+touch your computer, so it can't download this kit or keep your files, and it may tell
+you to connect GitHub in Settings, Connectors. You don't need that: this repo is public,
+so downloading it needs no GitHub account. The Code tab needs a paid Claude plan (Pro or
+higher).
+
+Pick your home folder as the folder to work in, and paste this:
+
+```
+Set me up with apply-kit from https://github.com/calebnewtonusc/apply-kit.
+Download it with git clone into a folder called apply-kit in my home folder
+(it's public, so no GitHub sign-in). If git isn't installed, install it.
+Before anything pops up (a window, a password prompt, a sign-in), tell me what
+it is and what to click. Then read the kit's CLAUDE.md and PROGRESS.md, follow
+them, and ask me the first question. At the end, tell me which folder to pick
+in the Code tab next time.
+```
+
+What can pop up, so nothing surprises you:
+
+- On a Mac that has never used developer tools, a macOS window asking to install the
+  Command Line Tools (that's where `git` comes from). It can open behind the Claude
+  window, so check the Dock if nothing seems to happen. Click Install and wait a few
+  minutes.
+- Claude asking permission to run a command or edit a file. Allow it; that's how it
+  downloads the kit and writes your answers down.
+
+Nothing asks for a password or a GitHub sign-in. **Next time**, open the Code tab, pick
+the `apply-kit` folder, and say anything. It picks up where you left off.
+
+If you're one of the first people through, finish by saying "write a PDF to my Downloads
+folder listing every snag I hit setting this up" and send it to Caleb, so the next
+person doesn't hit them.
+
+## Or from a terminal
 
 1. **Install Claude Code.** [claude.com/product/claude-code](https://claude.com/product/claude-code).
-   Sign in with a Claude account, free tier works to start.
-2. **Download this repo.** Green "Code" button, then "Download ZIP", then unzip it
-   somewhere you will find again. Desktop is fine.
-3. **Open your terminal.** Mac: Cmd+Space, type Terminal. Windows: install
+   It needs a paid Claude plan (Pro or higher).
+2. **Open your terminal.** Mac: Cmd+Space, type Terminal. Windows: install
    [Git for Windows](https://gitforwindows.org) and open Git Bash.
-4. Type `cd `, then drag the unzipped folder onto the terminal window, then hit enter.
-5. Type `claude` and hit enter.
-6. **Tell it what you are applying to.**
+3. Paste this and hit enter. On a Mac that has never used `git`, a window asks to
+   install the Command Line Tools first: click Install, then run it again.
 
-That is the whole setup. Step 6 is a sentence in your own words:
+   ```
+   git clone https://github.com/calebnewtonusc/apply-kit ~/apply-kit && cd ~/apply-kit && claude
+   ```
+
+4. **Tell it what you are applying to.**
+
+That is the whole setup. The first thing you say is a sentence in your own words:
 
 > I need to apply to three clubs by Friday
 
@@ -204,6 +244,14 @@ first.
 **`permission denied` on anything in `tools/`.** Run `chmod +x tools/*.sh` once. This
 happens when you downloaded the ZIP instead of cloning, which strips the executable bit.
 Running them as `sh tools/count.sh` works either way.
+
+**The chat told me to connect GitHub in Settings, Connectors.** You're in the chat tab.
+Click the `</>` icon at the top left for the Code tab and paste the prompt there. You
+don't need any connector.
+
+**Nothing is happening after I pasted the prompt.** Look for a window hiding behind
+Claude, usually the Command Line Tools installer, or a permission request inside the
+Code tab waiting for you to allow it.
 
 **It keeps asking me to confirm facts I already gave it.** It should only ask about
 things unconfirmed for three weeks, and never about anything current. If it is asking
