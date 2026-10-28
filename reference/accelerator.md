@@ -85,3 +85,33 @@ weakest part of what you wrote. The correct response to "why would that not work
 real answer or an honest "I do not know yet, here is how I would find out," never a
 deflection. Practice being interrupted, because a rehearsed pitch delivered over an
 interruption is the most common way this round goes badly.
+
+## Lead with the end state, then earn it
+
+YC and speedrun fund companies that could get very large, so a pre-traction app that
+only describes its wedge reads small. The first sentence of the one-liner, the
+description and "what are you building" states the end state. The second sentence
+states what is built. Then show the route as numbered steps, each earned by the one
+before it, with every unbuilt step labeled as the plan.
+
+On 2026-10-28 the Anchored drafts led with "church follow-up by text" and the founder
+sent them back: "YC and a16z invest in billion dollar ideas! You need to sell them on
+the route to an OS ecosystem that every christian on earth will use on all their
+devices." The fix kept traction honest (zero users, test data) while the vision led.
+
+Never do:
+
+- Lead with the wedge alone on a venture app when the founder has a bigger end state.
+- Size the market with a population count alone. Use sourced counts, a price or fee
+  marked `[NEED]` until set, and name the source and year of each number.
+- Write a later route step as if it exists. Built means the repo shows it.
+- Answer "why us" without naming the incumbents and what each one misses, with sourced
+  facts (customer counts, exits).
+
+## Rewriting a Google Doc draft whole
+
+The Drive connector's update_file changes metadata only, never content. To replace a
+Doc's text with a new markdown draft, upload over it:
+`gws drive files update --params '{"fileId":"<id>"}' --upload draft.md --upload-content-type text/markdown`,
+then `chewbacca google read <id>` and grep for the new lines and the absence of the old
+ones (2026-10-28, Anchored drafts Doc).
